@@ -18,7 +18,12 @@ void solve(int n, int file, vector<int>& board) {
     if (file == n)
     {
         for (int i = 0; i < n; i++){
-            cout << board[i] << " ";
+            for (int j = 0; j < n; j++){
+                if (j == board[i]){
+                    cout << 'Q' << ' ';
+                } else cout << '.' << ' ';
+            }
+            cout << '\n';
         }
         cout << "\n";
         return;
